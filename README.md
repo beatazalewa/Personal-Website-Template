@@ -183,7 +183,7 @@ Each component is self-contained with its own styling (CSS) and functionality, p
 - Animated bee icon with buzzing effects
 - Responsive two-column layout
 - Integration with site animations
-- Engaging facts and personal journey content
+- Engaging facts and personal journey contents
 
 **Content Sections**:
 - Introduction to beekeeping
