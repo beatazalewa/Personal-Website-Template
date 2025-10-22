@@ -5,20 +5,44 @@ Welcome to the Personal Website Template! This web app is designed to help you c
 ![Personal Website Screenshot](./src/components/images/personal_website_template_ss.png)
 
 ## Table of Contents
-1. [Key Features](#key-features)
-2. [Technologies Used](#technologies-used)
-3. [Getting Started](#getting-started)
+1. [Application Overview](#application-overview)
+2. [Component Architecture](#component-architecture)
+3. [Key Features](#key-features)
+4. [Technologies Used](#technologies-used)
+5. [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Running the Project](#running-the-project)
-4. [Personalizing the Project](#personalizing-the-project)
-    - [Changes in the `./public` Folder](#changes-in-the-public-folder)
-    - [Changes in the `./src` Folder](#changes-in-the-src-folder)
-5. [Hosting on GitHub](#hosting-on-github)
-6. [Helpful Websites](#helpful-websites)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+6. [Component Details](#component-details)
+7. [Personalizing the Project](#personalizing-the-project)
+8. [Hosting on GitHub](#hosting-on-github)
+9. [Helpful Websites](#helpful-websites)
+10. [Contributing](#contributing)
+11. [License](#license)
+12. [Contact](#contact)
+
+## Application Overview
+
+This Personal Website Template is a modern, responsive single-page application (SPA) built with React.js. It provides a comprehensive platform for individuals to showcase their professional profile, skills, projects, and personal interests. The application follows a modular component-based architecture, making it easy to customize and maintain.
+
+The website features a clean, professional design with smooth scrolling navigation, interactive animations, and responsive layouts that work seamlessly across desktop and mobile devices.
+
+## Component Architecture
+
+The application is structured using React functional components with the following hierarchy:
+
+```
+App (Main Container)
+├── Navbar (Navigation)
+├── Home (Landing Section)
+├── Skills (Technical Skills Display)
+├── Background (Education & Experience)
+├── Projects (Portfolio Showcase)
+├── Hobby (Personal Interests)
+└── Contact (Contact Form & Information)
+```
+
+Each component is self-contained with its own styling (CSS) and functionality, promoting modularity and reusability.
 
 ## Key Features
 
@@ -26,16 +50,21 @@ Welcome to the Personal Website Template! This web app is designed to help you c
 - **Skills Showcase**: Display your skills with customizable icons and animations.
 - **Education and Experience**: List your educational background and professional experience.
 - **Projects Section**: Highlight your projects with screenshots and links.
+- **Hobby Section**: Showcase personal interests and hobbies with engaging content.
 - **Contact Form**: Simple contact form with Formspree integration.
 - **Responsive Design**: Optimized for desktop and mobile devices.
+- **Smooth Navigation**: Seamless scrolling between sections with animated transitions.
+- **Interactive Elements**: Hover effects, animations, and visual feedback.
 
 ## Technologies Used
 
-- **React.js**: For building the user interface.
+- **React.js**: For building the user interface and component management.
 - **HTML**: For the structure of the web pages.
-- **CSS**: For styling the application.
+- **CSS**: For styling, animations, and responsive design.
 - **JavaScript**: For interactivity and functionality.
 - **Node.js**: Required to run the development server for the frontend application.
+- **React Router**: For smooth scrolling navigation between sections.
+- **Lottie React**: For rendering JSON-based animations.
 
 ## Getting Started
 
@@ -66,6 +95,155 @@ Welcome to the Personal Website Template! This web app is designed to help you c
     ```
 2. Open your browser and navigate to `http://localhost:3000`.
 
+## Component Details
+
+### 1. App Component (`src/App.js`)
+**Purpose**: Main application container that orchestrates all components and defines the overall page structure.
+
+**Features**:
+- Renders all page sections in proper order
+- Includes the Home section inline with personal introduction
+- Manages the overall application layout and flow
+- Provides consistent styling through App.css
+
+**Key Elements**:
+- Personal introduction with name and description
+- Social media connection links
+- Home section animation integration
+
+### 2. Navbar Component (`src/components/Navbar.js`)
+**Purpose**: Fixed navigation bar that provides smooth scrolling access to all page sections.
+
+**Features**:
+- Responsive navigation design
+- Smooth scrolling to page sections using react-scroll
+- Avatar/profile image display
+- Symmetrical link layout (Skills & Background on left, Projects & Hobby & Contact on right)
+
+**Navigation Links**:
+- Skills → Skills section
+- Background → Education & Experience
+- Projects → Portfolio showcase
+- Hobby → Personal interests
+- Contact → Contact information
+
+### 3. Skills Component (`src/components/Skills.js`)
+**Purpose**: Showcases technical and professional skills with visual icons and organized categorization.
+
+**Features**:
+- Elevated white container with shadow effects
+- Grid-based skill organization
+- Icon representation for each skill
+- Categorized skill sections (Frontend, Backend, Databases, etc.)
+- Responsive design for different screen sizes
+
+**Structure**:
+- Skills are organized in a table format
+- Each skill includes an icon and name
+- Supports multiple skill categories
+
+### 4. Background Component (`src/components/Background.js`)
+**Purpose**: Displays educational background and professional experience with interactive navigation.
+
+**Features**:
+- Tabbed interface for Education and Experience
+- Purple-themed design consistent with site accent color
+- Interactive buttons to switch between views
+- Integration with separate Education and Experience components
+- Background animation support
+
+**Sections**:
+- **Education**: Academic qualifications and achievements
+- **Experience**: Professional work history and accomplishments
+
+### 5. Projects Component (`src/components/Projects.js`)
+**Purpose**: Portfolio showcase featuring completed projects with descriptions, technologies, and links.
+
+**Features**:
+- Card-based project layout
+- Project screenshots with hover effects
+- Technology stack display
+- Live demo and GitHub repository links
+- Responsive grid layout
+- Screenshot background support with 16:9 ratio optimization
+
+**Project Information**:
+- Project title and description
+- Technology stack used
+- GitHub repository links
+- Live deployment links (when available)
+- Project screenshots
+
+### 6. Hobby Component (`src/components/Hobby.js`) *[New Addition]*
+**Purpose**: Personal section showcasing hobbies and interests, specifically featuring beekeeping.
+
+**Features**:
+- Educational content about bees and beekeeping
+- Interactive honeycomb hexagon pattern with orange/honey theme
+- Animated bee icon with buzzing effects
+- Responsive two-column layout
+- Integration with site animations
+- Engaging facts and personal journey content
+
+**Content Sections**:
+- Introduction to beekeeping
+- Importance of bees in ecosystem
+- Amazing bee facts with emoji icons
+- Personal beekeeping journey
+- Visual honeycomb pattern with animated elements
+
+### 7. Contact Component (`src/components/Contact.js`)
+**Purpose**: Contact information and form for visitors to get in touch.
+
+**Features**:
+- Email display with icon
+- Contact form integrated with Formspree
+- Google Maps integration for location display
+- Purple-themed design consistent with site branding
+- Form validation and submission handling
+- Responsive layout with form and map sections
+
+**Contact Methods**:
+- Email address display
+- Contact form with name, email, and message fields
+- Location map integration
+- Social media links (via Connect component)
+
+### 8. Supporting Components
+
+#### Animation Component (`src/components/Animation.js`)
+- Renders Lottie JSON animations
+- Used throughout the site for visual enhancement
+- Supports various animation files from the animations folder
+
+#### Connect Component (`src/components/Connect.js`)
+- Social media and professional links
+- LinkedIn, GitHub, and resume links
+- Consistent styling with hover effects
+
+#### Education & Experience Components
+- **Education.js**: Academic background with institutions, degrees, and dates
+- **Experience.js**: Professional work history with companies, roles, and descriptions
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Personal-Website-Template
+    ```
+3. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### Running the Project
+
+1. Start the application:
+    ```bash
+    npm start
+    ```
+2. Open your browser and navigate to `http://localhost:3000`.
+
+## Personalizing the Project
+
 ## Personalizing the Project
 
 ### Changes in the `./public` Folder
@@ -76,31 +254,40 @@ Welcome to the Personal Website Template! This web app is designed to help you c
 
 ### Changes in the `./src` Folder
 
-- **Home Section Name and Introduction** (`./src/App.js`)
-    - Update your name at line 31 and introduction at line 34 in `App.js`.
+#### Home Section (`./src/App.js`)
+- **Name and Introduction**: Update your name at line 31 and introduction at line 34 in `App.js`.
+- **Animation**: Find and customize an animation from [LottieFiles](https://lottiefiles.com/) and save the `.json` file in `./src/components/animations`. Reference the file at line 42 in `App.js`.
+- **Connection Links**: Update your LinkedIn, GitHub, and resume links in the Connect component.
 
-- **Home Section Animation** (`./src/App.js`)
-    - Find and customize an animation from [LottieFiles](https://lottiefiles.com/) and save the `.json` file in `./src/components/animations`. Reference the file at line 42 in `App.js`.
+#### Navigation (`./src/components/Navbar.js`)
+- **Profile Image/Logo**: Replace `avatar.png` in the `./src/components/images` folder and update the reference at line 17 in `Navbar.js`.
 
-- **Home Section Connection Links** (`./src/components/Connect.js`)
-    - Update your LinkedIn, GitHub, and resume links in `Connect.js`.
+#### Skills Section (`./src/components/Skills.js`)
+- **Skills Data**: Edit the `skillsSection` constant at line 8 in `Skills.js` to update your skills and their icons.
+- **Skill Categories**: Add or modify skill categories (Frontend, Backend, Database, etc.).
+- **Icons**: Update skill icons by adding SVG files to the images folder.
 
-- **Nav Bar Profile Image/Logo** (`./src/components/Navbar.js`)
-    - Replace `avatar.png` in the `./src/components/images` folder and update the reference at line 17 in `Navbar.js`.
+#### Background Section
+- **Education** (`./src/components/Education.js`): Update your education details in the `education` constant at line 3.
+- **Experience** (`./src/components/Experience.js`): Update your experience details in the `experience` constant at line 3.
 
-- **Skills Section** (`./src/components/Skills.js`)
-    - Edit the `skillsSection` constant at line 8 in `Skills.js` to update your skills and their icons.
+#### Projects Section (`./src/components/Projects.js`)
+- **Project Data**: Add your projects to the `projects` constant in `Projects.js`.
+- **Screenshots**: Add project screenshots to `./src/components/images/` folder.
+- **Recommended Image Ratio**: For best results, use images with a 16:9 ratio for project screenshots.
+- **Links**: Update GitHub repository and live demo URLs.
 
-- **Education and Experience** (`./src/components/Education.js`, `./src/components/Experience.js`)
-    - Update your education details in the `education` constant at line 3 in `Education.js`.
-    - Update your experience details in the `experience` constant at line 3 in `Experience.js`.
+#### Hobby Section (`./src/components/Hobby.js`) *[New]*
+- **Content**: Customize the hobby content, facts, and personal journey.
+- **Theme**: Modify the hobby theme (currently beekeeping) to match your interests.
+- **Animation**: Replace the animation file reference to match your hobby theme.
+- **Visual Elements**: Customize hexagon colors and bee icon in the CSS file.
 
-- **Projects** (`./src/components/Projects.js`)
-    - Add your projects to the `projects` constant in `Projects.js`.
-    - **Recommended Image Ratio**: For best results, use images with a 16:9 ratio for project screenshots.
-
-- **Contact Section** (`./src/components/Contact.js`)
-    - Update your email, Formspree endpoint, and Google Maps iframe code in `Contact.js`.
+#### Contact Section (`./src/components/Contact.js`)
+- **Email**: Update your email address.
+- **Formspree**: Set up your Formspree endpoint for form submissions.
+- **Map**: Update the Google Maps iframe code with your location.
+- **Contact Information**: Modify contact details and social media links.
 
 ## Hosting on GitHub
 

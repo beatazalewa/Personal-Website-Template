@@ -17,7 +17,8 @@ const Navbar = () => {
         <li><Link to="home" smooth={true} duration={500}> <img src={image("./avatar.png")} className="avatar" alt="avatar"/></Link></li>
         <div className="navbar-link-group"> 
           <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
-          <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+          <li><Link to="hobby-marker" smooth={true} duration={500}>Hobby</Link></li>
+          <li><Link to="contact-marker" smooth={true} duration={500}>Contact</Link></li>
         </div>
       </ul>
     </nav>

@@ -70,6 +70,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <div id="hobby-marker"/>
     </div>
   );
 };

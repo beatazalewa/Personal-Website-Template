@@ -5,6 +5,7 @@ import Connect from './components/Connect';
 import Skills from './components/Skills';
 import Background from './components/Background';
 import Projects from './components/Projects';
+import Hobby from './components/Hobby';
 import Contact from './components/Contact';
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
       <Skills />
       <Background />
       <Projects />
+      <Hobby />
       <Contact />
     </div>
   );
