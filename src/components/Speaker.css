@@ -1,0 +1,97 @@
+.speaker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative;
+
+  h2 {
+    color: #333;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+  }
+}
+
+.speaker-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.speaker-content {
+  flex: 1;
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.speaker-highlights ul,
+.speaker-talk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.speaker-highlights li {
+  padding: 0.4rem 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.speaker-talk-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.talk-title {
+  font-weight: 600;
+  color: #222;
+}
+
+.talk-meta {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.speaker-cta {
+  margin-top: 1.5rem;
+}
+
+.speaker-cta-link {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #6200ea;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.speaker-cta-link:hover {
+  background-color: #3700b3;
+}
+
+.speaker-animation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .speaker-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .speaker-content {
+    padding: 0 1rem;
+  }
+}
