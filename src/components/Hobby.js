@@ -9,7 +9,7 @@ const Hobby = () => {
       <div className="hobby-container">
         <div className="hobby-content">
           <div className="hobby-section">
-            <h3>The Fascinating World of Bees</h3>
+            <h3>The Fascinating World of My Bees</h3>
             <p>
               Beekeeping has become one of my most rewarding hobbies. There's something magical about 
               working with these incredible creatures that have been essential to our ecosystem for 
