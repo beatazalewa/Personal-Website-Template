@@ -74,11 +74,11 @@ describe('Projects Component', () => {
     expect(projectContainer).toBeInTheDocument();
   });
 
-  test('hobby marker is present', () => {
+  test('speaker marker is present', () => {
     render(<Projects />);
     
-    const hobbyMarker = document.querySelector('#hobby-marker');
-    expect(hobbyMarker).toBeInTheDocument();
+    const speakerMarker = document.querySelector('#speaker-marker');
+    expect(speakerMarker).toBeInTheDocument();
   });
 
   test('project summaries are displayed', () => {
